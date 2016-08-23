@@ -1,0 +1,22 @@
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript">
+    setTimeout(function sunrise() {
+        document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
+    }, 0);
+</script>
+
+<div class="default-page" ng-app="myApp" ng-controller="mainCtrl">
+    <div class="header">
+        <h1 id="main-title" class="container"><%= __('A brand new app.') %></h1>
+        <h3 class="container">You're looking at: <code><%= view.pathFromApp + '.' + view.ext %></code></h3>
+    </div>
+    <div class="main container clearfix">
+        <p>Getting data from the database</p>
+        <ul class="getting-started">
+            <li ng-repeat="thing in things">
+                {{thing.id}} : {{thing.name}}
+            </li>
+        </ul>
+    </div>
+</div>
